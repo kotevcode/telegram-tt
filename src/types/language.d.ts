@@ -947,6 +947,7 @@ export interface LangPair {
   'AttachSticker': undefined;
   'AttachMusic': undefined;
   'AttachContact': undefined;
+  'AttachStory': undefined;
   'MessageLocation': undefined;
   'MessageLiveLocation': undefined;
   'ServiceNotifications': undefined;
@@ -1208,6 +1209,7 @@ export interface LangPair {
   'GiftInfoDescriptionRegular': undefined;
   'GiftInfoDescriptionUpgradeRegular': undefined;
   'GiftInfoDescriptionFreeUpgrade': undefined;
+  'GiftInfoDescriptionUpgrade': undefined;
   'GiftInfoDescriptionUpgraded': undefined;
   'GiftInfoFrom': undefined;
   'GiftInfoDate': undefined;
@@ -1234,6 +1236,7 @@ export interface LangPair {
   'GiftInfoViewUpgraded': undefined;
   'GiftInfoUpgradeBadge': undefined;
   'GiftInfoUpgradeForFree': undefined;
+  'GiftInfoUpgrade': undefined;
   'GiftInfoWithdraw': undefined;
   'GiftInfoWear': undefined;
   'GiftInfoTakeOff': undefined;
@@ -1331,6 +1334,7 @@ export interface LangPair {
   'SearchTabMusic': undefined;
   'SearchTabVoice': undefined;
   'SearchTabMessages': undefined;
+  'SearchTabPublicPosts': undefined;
   'StarsTransactionsAll': undefined;
   'StarsTransactionsIncoming': undefined;
   'StarsTransactionsOutgoing': undefined;
@@ -1349,6 +1353,7 @@ export interface LangPair {
   'ProfileTabSharedGroups': undefined;
   'ProfileTabSimilarChannels': undefined;
   'ProfileTabSimilarBots': undefined;
+  'ProfileTabPublicPosts': undefined;
   'ActionUnsupportedTitle': undefined;
   'ActionUnsupportedDescription': undefined;
   'UnlockMoreSimilarBots': undefined;
@@ -1608,6 +1613,31 @@ export interface LangPair {
   'TitleAgeCheckFailed': undefined;
   'TitleAgeCheckSuccess': undefined;
   'ButtonAgeVerification': undefined;
+  'GiftRibbonPremium': undefined;
+  'PremiumGiftHeader': undefined;
+  'PriceInStars': undefined;
+  'PriceInTON': undefined;
+  'OnlyAcceptTON': undefined;
+  'OnlyAcceptTONDescription': undefined;
+  'DescriptionPayInTON': undefined;
+  'LabelPayInTON': undefined;
+  'PriceChanged': undefined;
+  'PayNewPrice': undefined;
+  'LinkPreview': undefined;
+  'ContextMoveTextUp': undefined;
+  'ContextMoveTextDown': undefined;
+  'ContextLinkLargerMedia': undefined;
+  'ContextLinkSmallerMedia': undefined;
+  'ContextLinkRemovePreview': undefined;
+  'AccLinkRemovePreview': undefined;
+  'GlobalSearch': undefined;
+  'DescriptionPublicPostsSearch': undefined;
+  'PublicPosts': undefined;
+  'PublicPostsLimitReached': undefined;
+  'PublicPostsPremiumFeatureDescription': undefined;
+  'PublicPostsPremiumFeatureSubtitle': undefined;
+  'PublicPostsSubscribeToPremium': undefined;
+  'PostsSearchTransaction': undefined;
 }
 
 export interface LangPairWithVariables<V = LangVariable> {
@@ -2785,6 +2815,37 @@ export interface LangPairWithVariables<V = LangVariable> {
   'ButtonSensitiveAlways': {
     'years': V;
   };
+  'NotificationGiftsLimit': {
+    'count': V;
+  };
+  'DescriptionGiftPremiumRequired': {
+    'count': V;
+  };
+  'DescriptionComposerGiftMinimumCurrencyPrice': {
+    'amount': V;
+  };
+  'DescriptionComposerGiftResaleCurrencyPrice': {
+    'amount': V;
+  };
+  'ButtonSellGiftTon': {
+    'amount': V;
+  };
+  'PriceChangedText': {
+    'originalAmount': V;
+    'newAmount': V;
+  };
+  'ButtonSearchPublicPosts': {
+    'query': V;
+  };
+  'PublicPostsSearchForStars': {
+    'stars': V;
+  };
+  'UnlockTimerPublicPostsSearch': {
+    'time': V;
+  };
+  'NotificationPaidExtraSearch': {
+    'stars': V;
+  };
 }
 
 export interface LangPairPlural {
@@ -3104,6 +3165,12 @@ export interface LangPairPluralWithVariables<V = LangVariable> {
     'count': V;
   };
   'TextAgeVerificationModal': {
+    'count': V;
+  };
+  'RemainingPublicPostsSearch': {
+    'count': V;
+  };
+  'HintPublicPostsSearchQuota': {
     'count': V;
   };
 }

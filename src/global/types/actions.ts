@@ -418,6 +418,9 @@ export interface ActionPayloads {
     shouldCheckFetchingMessagesStatus?: boolean;
   } & WithTabId;
   searchPopularBotApps: WithTabId | undefined;
+  checkSearchPostsFlood: {
+    query?: string;
+  } & WithTabId;
   addRecentlyFoundChatId: {
     id: string;
   };
@@ -2435,6 +2438,7 @@ export interface ActionPayloads {
     isSuccess?: boolean;
     isGift?: boolean;
     monthsAmount?: number;
+    gift?: ApiStarGift;
   } & WithTabId) | undefined;
   closePremiumModal: WithTabId | undefined;
 
@@ -2510,7 +2514,7 @@ export interface ActionPayloads {
   buyStarGift: {
     peerId: string;
     slug: string;
-    stars: number;
+    price: ApiTypeCurrencyAmount;
   } & WithTabId;
   sendPremiumGiftByStars: {
     userId: string;
@@ -2594,7 +2598,7 @@ export interface ActionPayloads {
 
   updateStarGiftPrice: {
     gift: ApiInputSavedStarGift;
-    price: number;
+    price: ApiTypeCurrencyAmount;
   } & WithTabId;
 
   openStarsGiftModal: ({
@@ -2638,6 +2642,16 @@ export interface ActionPayloads {
 
   openPaymentMessageConfirmDialogOpen: WithTabId | undefined;
   closePaymentMessageConfirmDialogOpen: WithTabId | undefined;
+  openPriceConfirmModal: {
+    originalAmount: number;
+    newAmount: number;
+    currency: 'TON' | 'XTR';
+    directInfo: {
+      formId: string;
+      inputInvoice: ApiInputInvoice;
+    };
+  } & WithTabId;
+  closePriceConfirmModal: WithTabId | undefined;
 
   // Forums
   toggleForum: {
